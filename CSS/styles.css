@@ -1,0 +1,335 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+.clearfix:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+
+/* layout */
+
+header,
+footer {
+    clear: both;
+}
+
+header,
+section,
+footer {
+    width: 100%;
+}
+
+footer {
+    background: var(--navy);
+    padding: 2rem;
+}
+
+.col-1,
+.col-2,
+.col-3,
+.hero,
+footer.col-1,
+footer.col-2 {
+    border: 1px solid var(--bluegray);
+}
+
+.col-1 {
+    text-align: left;
+    padding: 2rem;
+}
+
+.col-3 {
+    text-align: right;
+    padding: 2rem;
+}
+
+.col-1,
+.col-2,
+.col-3 {
+    width: 33.3333%;
+    float: left;
+}
+
+.col-2 {
+    text-align: center;
+}
+
+.hero {
+    width: 100%;
+}
+
+.visit, .schedule {
+    width: 50%;
+    float: left;
+}
+
+.left,
+.right {
+    width:50%;
+    float: left;
+}
+
+.blue-box {
+    border: 1px solid var(--bluegray);
+    width: 60%;
+    height: 22rem;
+    background: var(--bluegray);
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1rem;
+}
+
+
+.mission,
+.volunteer {
+    padding: 8rem 30rem;
+}
+
+/*base styles*/
+h1,
+h2,
+h3,
+h4,
+h6,
+nav a,
+button {
+    text-transform: uppercase;
+}
+
+:root {
+    --bluegray: rgba(102,118,138,255);
+    --white: rgba(255,255,255,255);
+    --black: rgb(0,0,0);
+    --gray: rgb(219,223,226);
+    --navy: rgb(22,31,42);
+}
+
+/* header styles */
+
+nav a,
+.hero {
+    background: var(--bluegray);
+}
+
+nav a, 
+.hero,
+footer {
+    color: var(--white);
+}
+
+.logo {
+    width: 10%;
+}
+
+nav a {
+    font-size: 1.5rem;
+    text-decoration: none;
+    padding-right: 1rem;
+}
+
+/* body styles*/
+h1,
+h2,
+h3,
+h4,
+h6,
+nav a,
+button,
+.hero p,
+footer {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.hero,
+.mission,
+.offerings,
+.volunteer {
+    text-align: center;
+}
+
+h1 {
+    font-size: 7rem;
+    padding-top: 10rem;
+}
+
+h1 + p {
+    font-size: 2rem;
+    font-weight: 700;
+    padding: 0 15rem;
+}
+
+.hero img {
+    padding-right: 1rem;
+    width: 3%;
+}
+
+button {
+    background: white;
+    border-radius: 3%;
+    font-weight: bold;
+    padding: 1rem 1.5rem;
+    color: var(--bluegray);
+}
+
+.watch {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10rem;
+}
+
+.watch span,
+.mission p,
+.volunteer p,
+.offerings p {
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+.mission p,
+.volunteer p {
+    font-size: 2rem;
+}
+
+.mission h2,
+.volunteer h4 {
+    font-size: 3rem;
+}
+
+.offerings {
+    background: var(--gray);
+    padding: 8rem 0;
+}
+
+.offerings h3 {
+    font-size: 2rem;
+}
+
+.offerings p {
+    font-size: 1.5rem;
+    padding: 0 4rem;
+}
+
+/* footer styles */
+
+footer h6,
+footer a,
+footer p {
+    color: white;
+    font-size: 1.5rem;
+}
+
+.left {
+    padding-left: 6rem;
+}
+
+footer .right {
+    padding-left: 35rem;
+}
+
+.business {
+    margin: 0 6rem;
+    width: 80%;
+    float: left;
+}
+
+a {
+    text-decoration: none;
+}
+
+footer h6,
+footer p {
+    margin: 1rem 0;
+}
+
+footer h6 {
+    color: gray;
+}
+
+footer a,
+.business p {
+    font-weight: bold;
+    padding-right: 1.5rem;
+}
+
+footer img {
+    width: 4%;
+    float: left;
+}
+
+.line {
+    background: white;
+    width: 89%;
+    height: 0.1rem;
+    float: left;
+    margin-left: 6rem;
+}
+
+/* media query */
+
+@media screen and (max-width: 3000px) {
+    .show-mobile {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    html {
+        font-size: 50%;
+    }
+}
+
+@media screen and (max-width: 1040px) {
+    footer .right {
+        padding-left: 25rem;
+    }
+}
+
+@media screen and (max-width: 985px) {
+    .visit,
+    .schedule {
+        width: 100%;
+    }
+    .volunteer,
+    .mission {
+        padding: 8rem 15rem;
+    }
+    footer .left,
+    footer .right {
+        width: 100%;
+    }
+    footer .right {
+        padding-left: 6rem;
+    }
+    .logo {
+        width: 16%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    html {
+        font-size: 40%;
+    }
+    footer .left {
+        display: none;
+    }
+    .show-mobile {
+        display: block;
+        color: white;
+        font-size: large;
+    }
+    .hide-500 {
+        display: none;
+    }
+    .logo {
+        width: 30%;
+    }
+}
